@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>АПТЕЧКА - Обмен с 1С</title>
+	<meta property="og:title" content="АПТЕЧКА - Обмен с 1С">
+	<meta property="og:description" content="Описание">
+	<meta property="og:url" content="/">
+	<meta property="og:site_name" content="АПТЕЧКА - Обмен с 1С">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<!-- styles -->
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!-- header -->
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="header__left">
+						<a href="dashboard.html" class="header__logotype">
+							<img src="img/logotype.svg" width="127.5" height="30" alt="apte4ka">
+						</a>
+					</div>
+					<div class="header__right">
+						<div class="header__group">
+							<a href="index.html" class="header__link">Вернуться на сайт</a>
+						</div>
+						<div class="header__group">
+							<div class="header__user c-user">
+								<a href="#" class="c-user__trigger">
+									<img src="img/user.svg" alt="АС">
+									<span>Александр Смирнов</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header -->
+		<!-- content -->
+		<div class="wrapper__content">
+			<!-- dashboard -->
+			<div class="dashboard" id="dashboard">
+				<div class="container">
+					<div class="dashboard__wrap">
+						<div class="dashboard__left">
+							<div class="dashboard-nav dashboard__nav">
+								<ul class="dashboard-nav__list">
+									<li class="dashboard-nav__item is--active">
+										<a href="#" class="dashboard-nav__link">
+											<svg>
+												<use xlink:href="img/sprite.svg#icon-exchange"></use>
+											</svg>
+											<span>Обмен с 1С</span>
+										</a>
+									</li>
+									<li class="dashboard-nav__item">
+										<a href="#" class="dashboard-nav__link">
+											<svg>
+												<use xlink:href="img/sprite.svg#icon-hamburger"></use>
+											</svg>
+											<span>Админка Битрикс</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dashboard__right">
+							<div class="dashboard__top">
+								<h1 class="dashboard__heading">Обмен с 1С</h1>
+							</div>
+							<div class="dashboard__wrapper">
+								<div class="dashboard__column">
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Категории товаров</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+												<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+												<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+											</div>
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+												<div class="dashboard-card__operations">
+													<span class="dashboard-card__operation">Новые <span>1934</span></span>
+													<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>1934</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__block">
+												<div class="c-manual-start dashboard-card__manual-start">
+													<span class="c-manual-start__subtitle">Ручной запуск</span>
+													<div class="c-manual-start__wrapper">
+														<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+													</div>
+													<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+													<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+													<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Базовые цены</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item is--error">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Региональные цены (all)</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+												<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+												<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+											</div>
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+												<div class="dashboard-card__operations">
+													<span class="dashboard-card__operation">Новые <span>1934</span></span>
+													<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>1934</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__block">
+												<div class="c-manual-start dashboard-card__manual-start is--error">
+													<span class="c-manual-start__subtitle">Ручной запуск</span>
+													<div class="c-manual-start__wrapper">
+														<div class="default-select c-manual-start__select">
+															<select class="js-select">
+																<option value="0">Для всех категорий</option>
+																<option value="1">Для всех регионов</option>
+																<option value="2">Для одной категории</option>
+															</select>
+														</div>
+														<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+													</div>
+													<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+													<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+													<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Цены. Доставка (all)</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Списки товарных рекомендаций</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Изображения товаров</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard__column">
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Товары</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem">Источник: <span>Александр Смирнов</span></span>
+												<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+												<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+											</div>
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+												<div class="dashboard-card__operations">
+													<span class="dashboard-card__operation">Новые <span>1934</span></span>
+													<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>1934</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__block">
+												<div class="c-manual-start dashboard-card__manual-start">
+													<span class="c-manual-start__subtitle">Ручной запуск</span>
+													<div class="c-manual-start__wrapper">
+														<div class="default-select c-manual-start__select">
+															<select class="js-select">
+																<option value="0">Для всех категорий</option>
+																<option value="1">Для всех регионов</option>
+																<option value="2">Для одной категории</option>
+															</select>
+														</div>
+														<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+													</div>
+													<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+													<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+													<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Акционные товары</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Выполнен запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Цены. Доставка (short update)</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Ярлыки товаров</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Аптеки</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-card dashboard__item">
+										<div class="dashboard-card__top">
+											<span class="dashboard-card__title">Региональные цены (short update)</span>
+											<div class="dashboard-card__controls">
+												<div class="c-sm-info dashboard-card__info">
+													<button class="c-sm-info__trigger">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-info"></use>
+														</svg>
+													</button>
+													<div class="c-sm-info__dropdown">
+														<div class="c-sm-info__content">
+															<p>
+																Скрипт: /sync/get-category.php
+																<br><br>
+																Получаем список категорий товаров для сайта доставки и бронирования из 1С.
+																Скрипт вызывает процедуру API GetCategories()
+																<br>
+																<a href="#">Документация</a>
+															</p>
+														</div>
+													</div>
+												</div>
+												<button class="dashboard-card__control">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="dashboard-card__body">
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+												<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+												<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+											</div>
+											<div class="dashboard-card__block">
+												<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+												<div class="dashboard-card__operations">
+													<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+												</div>
+											</div>
+										</div>
+										<div class="dashboard-card__block">
+											<div class="c-manual-start dashboard-card__manual-start">
+												<span class="c-manual-start__subtitle">Ручной запуск</span>
+												<div class="c-manual-start__wrapper">
+													<div class="default-select c-manual-start__select">
+														<select class="js-select">
+															<option value="0">Для всех категорий</option>
+															<option value="1">Для всех регионов</option>
+															<option value="2">Для одной категории</option>
+														</select>
+													</div>
+													<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+												</div>
+												<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+												<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+												<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end of dashboard -->
+		</div>
+		<!-- end of content -->
+	</div>
+	<!-- end of wrapper -->
+	<!-- scripts -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
