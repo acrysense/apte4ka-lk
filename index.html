@@ -45,6 +45,11 @@
 									<span>Александр Смирнов</span>
 								</a>
 							</div>
+							<button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+								<span class="hamburger__inner"></span>
+								<span class="hamburger__inner"></span>
+								<span class="hamburger__inner"></span>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -58,25 +63,30 @@
 				<div class="container">
 					<div class="dashboard__wrap">
 						<div class="dashboard__left">
-							<div class="dashboard-nav dashboard__nav">
-								<ul class="dashboard-nav__list">
-									<li class="dashboard-nav__item is--active">
-										<a href="#" class="dashboard-nav__link">
-											<svg>
-												<use xlink:href="img/sprite.svg#icon-exchange"></use>
-											</svg>
-											<span>Обмен с 1С</span>
-										</a>
-									</li>
-									<li class="dashboard-nav__item">
-										<a href="#" class="dashboard-nav__link">
-											<svg>
-												<use xlink:href="img/sprite.svg#icon-hamburger"></use>
-											</svg>
-											<span>Админка Битрикс</span>
-										</a>
-									</li>
-								</ul>
+							<div class="dashboard-nav dashboard__nav" id="dashboard-nav">
+								<div class="dashboard-nav__wrap">
+									<div class="dashboard-nav__top">
+										<span class="dashboard-nav__title">Меню</span>
+									</div>
+									<ul class="dashboard-nav__list">
+										<li class="dashboard-nav__item is--active">
+											<a href="#" class="dashboard-nav__link">
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-exchange"></use>
+												</svg>
+												<span>Обмен с 1С</span>
+											</a>
+										</li>
+										<li class="dashboard-nav__item">
+											<a href="#" class="dashboard-nav__link">
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-hamburger"></use>
+												</svg>
+												<span>Админка Битрикс</span>
+											</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 						<div class="dashboard__right">
@@ -108,37 +118,47 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
-												<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
-												<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
-											</div>
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
-												<div class="dashboard-card__operations">
-													<span class="dashboard-card__operation">Новые <span>1934</span></span>
-													<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
-													<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>1934</span></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
 												</div>
 											</div>
-											<div class="dashboard-card__block">
-												<div class="c-manual-start dashboard-card__manual-start">
-													<span class="c-manual-start__subtitle">Ручной запуск</span>
-													<div class="c-manual-start__wrapper">
-														<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation">Новые <span>1934</span></span>
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>2368</span></span>
+														<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>90</span></span>
 													</div>
-													<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
-													<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
-													<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -166,21 +186,57 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													</div>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="dashboard-card dashboard__item is--error">
+									<div class="dashboard-card dashboard__item">
 										<div class="dashboard-card__top">
 											<span class="dashboard-card__title">Региональные цены (all)</span>
 											<div class="dashboard-card__controls">
@@ -203,44 +259,54 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
-												<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
-												<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
-											</div>
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
-												<div class="dashboard-card__operations">
-													<span class="dashboard-card__operation">Новые <span>1934</span></span>
-													<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
-													<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>1934</span></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
 												</div>
 											</div>
-											<div class="dashboard-card__block">
-												<div class="c-manual-start dashboard-card__manual-start is--error">
-													<span class="c-manual-start__subtitle">Ручной запуск</span>
-													<div class="c-manual-start__wrapper">
-														<div class="default-select c-manual-start__select">
-															<select class="js-select">
-																<option value="0">Для всех категорий</option>
-																<option value="1">Для всех регионов</option>
-																<option value="2">Для одной категории</option>
-															</select>
-														</div>
-														<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation">Новые <span>1934</span></span>
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+														<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>1934</span></span>
 													</div>
-													<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
-													<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
-													<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start is--error">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -268,17 +334,53 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													</div>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -305,18 +407,23 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												</div>
 											</div>
+											<div class="dashboard-card__section dashboard-card__section--full"></div>
 										</div>
 									</div>
 									<div class="dashboard-card dashboard__item">
@@ -342,17 +449,53 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													</div>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -381,44 +524,54 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem">Источник: <span>Александр Смирнов</span></span>
-												<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
-												<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
-											</div>
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
-												<div class="dashboard-card__operations">
-													<span class="dashboard-card__operation">Новые <span>1934</span></span>
-													<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
-													<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>1934</span></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
 												</div>
 											</div>
-											<div class="dashboard-card__block">
-												<div class="c-manual-start dashboard-card__manual-start">
-													<span class="c-manual-start__subtitle">Ручной запуск</span>
-													<div class="c-manual-start__wrapper">
-														<div class="default-select c-manual-start__select">
-															<select class="js-select">
-																<option value="0">Для всех категорий</option>
-																<option value="1">Для всех регионов</option>
-																<option value="2">Для одной категории</option>
-															</select>
-														</div>
-														<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Александр Смирнов</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation">Новые <span>1934</span></span>
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+														<span class="dashboard-card__operation" style="--color: #C12D2C;">Удалено <span>1934</span></span>
 													</div>
-													<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
-													<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
-													<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -446,17 +599,53 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Выполнен запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Выполнен запуск: <span>22.02.2025 в 12:51</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													</div>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -483,17 +672,53 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													</div>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -520,17 +745,53 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													</div>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -557,17 +818,53 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem"><a href="#">Запустить обмен</a></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+												</div>
+											</div>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+													</div>
+												</div>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -594,43 +891,53 @@
 														</div>
 													</div>
 												</div>
-												<button class="dashboard-card__control">
+												<button class="dashboard-card__control dashboard-card__control--view">
 													<svg>
 														<use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+													</svg>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-arrow-sm"></use>
 													</svg>
 												</button>
 											</div>
 										</div>
 										<div class="dashboard-card__body">
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
-												<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
-												<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
-												<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
-											</div>
-											<div class="dashboard-card__block">
-												<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
-												<div class="dashboard-card__operations">
-													<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
+											<div class="dashboard-card__section dashboard-card__section--short">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
 												</div>
 											</div>
-										</div>
-										<div class="dashboard-card__block">
-											<div class="c-manual-start dashboard-card__manual-start">
-												<span class="c-manual-start__subtitle">Ручной запуск</span>
-												<div class="c-manual-start__wrapper">
-													<div class="default-select c-manual-start__select">
-														<select class="js-select">
-															<option value="0">Для всех категорий</option>
-															<option value="1">Для всех регионов</option>
-															<option value="2">Для одной категории</option>
-														</select>
+											<div class="dashboard-card__section dashboard-card__section--full">
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Последний запуск: <span>22.02.2025 в 12:51</span></span>
+													<span class="dashboard-card__elem">Источник: <span>Crone</span></span>
+													<span class="dashboard-card__elem">Лог скрипта: <a href="#">Открыть</a></span>
+													<span class="dashboard-card__elem">Лог Crone: <a href="#">Открыть</a></span>
+												</div>
+												<div class="dashboard-card__block">
+													<span class="dashboard-card__elem">Элементов в обмене: <span>2314</span></span>
+													<div class="dashboard-card__operations">
+														<span class="dashboard-card__operation" style="--color: #008BD2;">Обновлено <span>1934</span></span>
 													</div>
-													<button class="c-manual-start__btn btn btn--sm">Запустить</button>
 												</div>
-												<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
-												<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
-												<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+												<div class="dashboard-card__block">
+													<div class="c-manual-start dashboard-card__manual-start">
+														<span class="c-manual-start__subtitle">Ручной запуск</span>
+														<div class="c-manual-start__wrapper">
+															<div class="default-select c-manual-start__select">
+																<select class="js-select">
+																	<option value="0">Для всех категорий</option>
+																	<option value="1">Для всех регионов</option>
+																	<option value="2">Для одной категории</option>
+																</select>
+															</div>
+															<button class="c-manual-start__btn btn btn--sm">Запустить</button>
+														</div>
+														<span class="c-manual-start__message">Запущен обмен с 1С. Дождитесь окончания. Время: <span>00:12:34</span></span>
+														<span class="c-manual-start__message is--done">Обмен завершен. Ошибок нет</span>
+														<span class="c-manual-start__message is--error">Ошибка обмена. <a href="#">Открыть лог</a></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
